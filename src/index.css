@@ -1,13 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* SCROLLBAR FOR CONTENT */
+::-webkit-scrollbar-thumb {
+  transition: ease 5s;
+}
+.about-me_content::-webkit-scrollbar {
+  width: 10px;
+}
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background: red !important;
+}
+.about-me_content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.about-me_content::-webkit-scrollbar-thumb {
+  background: rgba(61, 64, 91, 0.5);
+  border-radius: 20px;
+}
+.about-me_content::-webkit-scrollbar-thumb:hover {
+  background: rgba(61, 64, 91, 0.65);
+}
+/* SCROLLBAR FOR IMAGES */
+.about-me_content-right::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+span {
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.container-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #3d405b;
+  color: #f4f1de;
+}
+
+.navbar {
+  height: 17%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.navbar-title {
+  color: #e07a5f;
+  text-decoration: underline;
+  font-size: 47px;
+  line-height: 57.6px;
+  font-weight: bold;
+}
+
+.navbar-hamburguer {
+  width: 70px;
+  height: 70px;
+}
+
+.content {
+  width: 80%;
+  height: 83%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.align-right {
+  align-items: flex-end;
+}
+
+h1.home-title {
+  font-size: 144px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 134px;
+  margin-left: -10px;
+}
+
+span.home-subtitle {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 35px;
+}
+
+div.home-button {
+  background: #e07a5f;
+  box-shadow: 0px 0px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 67px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 58px;
+  justify-content: center;
+  width: 345px;
+  height: 103px;
+  margin-top: 70px;
+  cursor: pointer;
+}
+div.home-button:hover {
+  filter: brightness(85%);
+}
+
+img.home-image {
+  filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.25));
+  border-radius: 145px;
+  height: 492px;
+  width: 492px;
+  margin-top: 10px;
+}
+
+img.home-image-title {
+  border-radius: 145px;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  margin-top: -8px;
+}
+
+img,
+.home-button {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.navbar-title.display-icon img {
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.navbar-title.display-icon span {
+  margin-left: 85px;
+}
+
+.content-container.hide-profile {
+  transform: translate(2000px, 0px);
+}
+
+.content-container.hide-display {
+  transform: translate(-2000px, 0px);
+}
+
+.home-image,
+.home-button,
+.display-icon span,
+.home-image-title {
+  transition: ease 1s;
+}
+
+.content-container {
+  transition: ease 1.5s;
+}
+
+.about-me_content {
+  border-radius: 24px;
+  background-color: #f4f1de;
+  width: 85%;
+  height: 88%;
+  overflow-x: hidden;
+  border: 18px solid #f4f1de;
+  filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.25));
+}
+.about-me_content span {
+  color: #3d405b;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 109%;
+}
+
+.about-me_content-right {
+  height: 92.3%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  border-radius: 24px;
+  flex-direction: column;
+  filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, 0.25));
+}
+
+.about-me_content-right img {
+  width: 100%;
+  object-fit: contain;
 }
